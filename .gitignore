@@ -1,0 +1,12 @@
+.idea/
+!.idea/profile_settings.xml
+!.idea/copyright/Chewbotcca.xml
+.project
+.classpath
+.settings/
+target/
+bot.properties
+*.rb
+*Example*
+*.iml
+lib/*.jar
