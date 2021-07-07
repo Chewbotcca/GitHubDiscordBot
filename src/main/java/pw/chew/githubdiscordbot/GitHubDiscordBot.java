@@ -36,6 +36,7 @@ import org.kohsuke.github.GitHubBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pw.chew.githubdiscordbot.commands.BaseCommand;
+import pw.chew.githubdiscordbot.listeners.GitHubMessageListener;
 
 import javax.security.auth.login.LoginException;
 import java.io.FileInputStream;
@@ -87,7 +88,8 @@ public class GitHubDiscordBot {
             .setActivity(Activity.playing("Booting"))
             .addEventListeners(
                 client,
-                waiter
+                waiter,
+                new GitHubMessageListener(github)
             ).build();
     }
 }
